@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping\Table;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\GeneratedValue;
+use Smarthire\Lang\Getter;
+use Smarthire\Lang\Setter;
 
 /**
  * Class User
@@ -17,6 +19,10 @@ use Doctrine\ORM\Mapping\GeneratedValue;
  */
 class User
 {
+
+    use Getter;
+    use Setter;
+
     /**
      * @var integer
      *
@@ -47,4 +53,6 @@ class User
     private $lastLogin;
 
     private $specialist;
+
+    private $roles;
 }

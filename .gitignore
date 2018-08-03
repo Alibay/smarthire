@@ -1,2 +1,4 @@
 .idea
 *.lock
+@docker/log
+@docker/resources

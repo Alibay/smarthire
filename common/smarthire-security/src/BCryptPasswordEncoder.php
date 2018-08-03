@@ -4,7 +4,7 @@ namespace Smarthire\Security;
 
 /**
  * Class BCryptPasswordEncoder
- * @package App\Utils\Security
+ * @package Smarthire\Security
  */
 class BCryptPasswordEncoder implements PasswordEncoder
 {

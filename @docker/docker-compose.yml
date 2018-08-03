@@ -5,7 +5,7 @@ services:
     build: ./images/nginx
     container_name: smarthire-api-web
     depends_on:
-      - php
+      - smarthire-api
     ports:
       - 5500:80
     networks:
@@ -18,9 +18,9 @@ services:
       - ./images/nginx/host.conf:/etc/nginx/conf.d/smarthire.conf
       - ./log/nginx:/var/log/nginx
       #site
-      - ../src/public:/var/www/smarthire/public
-      - ../src/public/swagger:/var/www/smarthire/public/swagger
-      - ../upload:/var/www/smarthire/images
+      - ../smarthire-api/public:/var/www/smarthire/public
+      - ../smarthire-api/public/swagger:/var/www/smarthire/public/swagger
+      #- ../upload:/var/www/smarthire/images
 
   smarthire-api:
     build: ./images/php
@@ -36,12 +36,11 @@ services:
       UPLOAD_DIRECTORY: /var/www/smarthire/images
     volumes:
       - ./log/php:/var/www/smarthire/data/logs
-      - ../src/public:/var/www/smarthire/public
-      - ../src/config:/var/www/smarthire/config
-      - ../src/app:/var/www/smarthire/app
-      - ../src/vendor:/var/www/smarthire/vendor
-      - ../src/composer.json:/var/www/smarthire/composer.json
-      - ../upload:/var/www/smarthire/images
+      - ../smarthire-api/public:/var/www/smarthire/public
+      - ../smarthire-api/config:/var/www/smarthire/config
+      - ../smarthire-api/app:/var/www/smarthire/app
+      - ../smarthire-api/vendor:/var/www/smarthire/vendor
+      - ../smarthire-api/composer.json:/var/www/smarthire/composer.json
 
   smarthire-db:
     build: ./images/db

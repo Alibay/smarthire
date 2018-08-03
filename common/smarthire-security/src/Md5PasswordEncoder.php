@@ -4,7 +4,7 @@ namespace Smarthire\Security;
 
 /**
  * Class Md5PasswordEncoder
- * @package App\Utils\Security
+ * @package Smarthire\Security
  */
 class Md5PasswordEncoder implements PasswordEncoder
 {

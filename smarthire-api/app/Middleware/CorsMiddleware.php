@@ -16,6 +16,9 @@ class CorsMiddleware
 
     public function __invoke(Request $request, Response $response, $next)
     {
-        $next($request, $response);
+        return $next($request, $response)
+            ->withHeader('Access-Control-Allow-Origin', $this->_settings['origin'])
+            ->withHeader('Access-Control-Allow-Headers', $this->_settings['headers'])
+            ->withHeader('Access-Control-Allow-Methods', $this->_settings['methods']);
     }
 }

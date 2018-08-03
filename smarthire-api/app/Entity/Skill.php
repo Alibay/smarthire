@@ -11,32 +11,32 @@ use Smarthire\Lang\Getter;
 use Smarthire\Lang\Setter;
 
 /**
- * Class Specialist
+ * Class Skill
  * @package App\Entity
  *
  * @Entity
- * @Table(schema="public", name="users")
+ * @Table(schema="public", name="skills")
  */
-class Specialist
+class Skill
 {
+
     use Getter;
     use Setter;
-    
+
     /**
      * @var integer
+     *
      * @Id
+     * @Column(type="integer")
+     * @GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
-     * @Column(type="string", name="first_name", length=255, nullable=false)
+     * @Column(type="string",length=255, nullable=false)
      */
-    private $fistName;
+    private $name;
 
-    /**
-     * @var string
-     * @Column(type="string", name="last_name", length=255, nullable=false)
-     */
-    private $lastName;
+    private $parent;
 }

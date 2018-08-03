@@ -9,5 +9,13 @@
     "require": {
         "slim/slim": "^3.10",
         "doctrine/orm": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+
+            "Smarthire\\Security\\": "../common/smarthire-security/src",
+            "Smarthire\\Config\\": "../common/smarthire-config/src"
+        }
     }
 }

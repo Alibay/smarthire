@@ -2,13 +2,7 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping\Entity;
-use Doctrine\ORM\Mapping\Table;
-use Doctrine\ORM\Mapping\Id;
-use Doctrine\ORM\Mapping\Column;
-use Doctrine\ORM\Mapping\GeneratedValue;
-use Smarthire\Lang\Getter;
-use Smarthire\Lang\Setter;
+use Smarthire\Lang\GetterAndSetter;
 
 /**
  * Class Company
@@ -20,8 +14,7 @@ use Smarthire\Lang\Setter;
 class Role
 {
 
-    use Getter;
-    use Setter;
+    use GetterAndSetter;
 
     /**
      * @var integer

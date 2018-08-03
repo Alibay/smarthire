@@ -8,7 +8,10 @@
     ],
     "require": {
         "slim/slim": "^3.10",
-        "doctrine/orm": "^2.5"
+        "doctrine/orm": "^2.5",
+        "symfony/serializer": "^3.4",
+        "symfony/property-access": "^3.4",
+        "symfony/property-info": "^3.4"
     },
     "autoload": {
         "psr-4": {

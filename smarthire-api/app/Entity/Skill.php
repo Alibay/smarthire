@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Smarthire\Lang\Getter;
+use Smarthire\Lang\GetterAndSetter;
 use Smarthire\Lang\Setter;
 
 /**
@@ -20,8 +21,7 @@ use Smarthire\Lang\Setter;
 class Skill
 {
 
-    use Getter;
-    use Setter;
+    use GetterAndSetter;
 
     /**
      * @var integer

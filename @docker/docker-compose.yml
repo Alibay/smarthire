@@ -18,8 +18,7 @@ services:
       - ./images/nginx/host.conf:/etc/nginx/conf.d/smarthire.conf
       - ./log/nginx:/var/log/nginx
       #site
-      - ../smarthire-api/public:/var/www/smarthire/public
-      - ../smarthire-api/public/swagger:/var/www/smarthire/public/swagger
+      - ../smarthire-web/build:/var/www/smarthire/public
       #- ../upload:/var/www/smarthire/images
 
   smarthire-api:
@@ -41,6 +40,7 @@ services:
       - ../smarthire-api/app:/var/www/smarthire/app
       - ../smarthire-api/vendor:/var/www/smarthire/vendor
       - ../smarthire-api/composer.json:/var/www/smarthire/composer.json
+      - ../common:/var/www/common
 
   smarthire-db:
     build: ./images/db

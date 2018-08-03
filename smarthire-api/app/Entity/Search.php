@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
+use Smarthire\Lang\GetterAndSetter;
+
 class Search
 {
-    use Getter;
-    use Setter;
+    use GetterAndSetter;
 
     private $user;
 

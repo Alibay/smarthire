@@ -1,0 +1,11 @@
+{
+    "name": "smarthire/config",
+    "authors": [
+        {
+            "name": "Ibraim Alibay",
+            "email": "ibraim.alibay@gmail.com"
+        }
+    ],
+    "require": {
+    }
+}

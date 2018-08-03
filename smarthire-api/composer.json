@@ -1,0 +1,13 @@
+{
+    "name": "alibay/smarthire-api",
+    "authors": [
+        {
+            "name": "Ibraim Alibay",
+            "email": "ibraim.alibay@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.10",
+        "doctrine/orm": "^2.5"
+    }
+}

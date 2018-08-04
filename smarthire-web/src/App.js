@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
+import {
+    HashRouter,
+    BrowserRouter,
+    Route
+} from 'react-router-dom';
+
+import { Home } from './pages/Home';
+import { SpecialistsPage } from './pages/SpecialistsPage';
+import NavBar from './components/shared/NavBar';
+
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-          <p>IBRAIM</p>
-      </div>
+      <BrowserRouter>
+          <div className="main">
+              <NavBar />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/specialists" component={SpecialistsPage} />
+          </div>
+      </BrowserRouter>
     );
   }
 }
